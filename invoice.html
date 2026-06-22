@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Create Invoice</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Create GST Invoice</h2>
+
+<div class="card">
+
+<input id="customerName"
+placeholder="Customer Name">
+
+<input id="customerMobile"
+placeholder="Mobile Number">
+
+<input id="customerGST"
+placeholder="GST Number">
+
+</div>
+
+<div class="card">
+
+<h3>Add Product</h3>
+
+<input id="itemName"
+placeholder="Item Name">
+
+<input id="qty"
+type="number"
+placeholder="Quantity">
+
+<input id="rate"
+type="number"
+placeholder="Rate">
+
+<button onclick="addItem()">
+Add Item
+</button>
+
+</div>
+
+<div class="card">
+
+<table id="invoiceTable">
+
+<thead>
+<tr>
+<th>Item</th>
+<th>Qty</th>
+<th>Rate</th>
+<th>Amount</th>
+</tr>
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<div id="totals"></div>
+
+<br>
+
+<button onclick="saveInvoice()">
+Save Invoice
+</button>
+
+</div>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/invoice.js"></script>
+
+</body>
+</html>
