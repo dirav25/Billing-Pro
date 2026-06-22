@@ -1,0 +1,18 @@
+const STORAGE_KEYS = {
+ invoices: "sst_invoices",
+ customers: "sst_customers",
+ products: "sst_products"
+};
+
+function saveData(key,data){
+ localStorage.setItem(
+  key,
+  JSON.stringify(data)
+ );
+}
+
+function getData(key){
+ return JSON.parse(
+  localStorage.getItem(key)
+ ) || [];
+}
